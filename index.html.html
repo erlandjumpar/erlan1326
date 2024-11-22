@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Praktikum Desain Web</title>
+</head>
+<body>
+    <ul>
+        <li><a href=""><img src="images/logo.jpg" alt="" id="logo"></a></li>
+        <div class="menu">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item">Objek Wisata</a></li>
+            <li><a href="#" class="nav-item">Akomodasi</a></li>
+            <li><a href="#" class="nav-item">Wawasan</a></li>
+        </div>
+    </ul>    
+
+    <div class="jumbotron">
+        <div class="kotak">
+            <h1>MARI KUNJUNGI!</h1>
+            <h3>Raja Ampat</h3>
+            <div class="button_kiri">
+                <a href="" class="button1">Jelajahi</a>
+            </div>
+            <div class="button_kanan">
+                <a href="" class="button2">Video</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="content" id="content1">
+        <div class="heading">
+            <h1>Paket yang <span class="hijau">Kami Tawarkan</span></h1>
+        </div>
+        <br>
+        <table border="1">
+            <tr>
+                <th>Tracking Mudah</th>
+                <th>Tracking Menengah</th>
+                <th>Tracking Ekstrim</th>
+            </tr>
+            <tr>
+                <td>Harga Mulai 4 juta / hari</td>
+                <td>Harga Mulai 7 juta / hari</td>
+                <td>Harga Mulai 10 juta / hari</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="content" id="content2">
+        <div class="">
+            <button id="button_info" onclick="button_info()">Apa itu Raja Ampat?</button>
+        </div>
+        <div id="infoRajaAmpat" style="display: none;">
+            <div class="box-RajaAmpat-kiri">
+                <span>
+                    Raja Ampat adalah salah satu kabupaten di provinsi Papua Barat Daya, Indonesia. Ibukota kabupaten ini terletak di Waisai. Kabupaten ini memiliki 610 pulau, termasuk kepulauan Raja Ampat. Empat di antaranya, yakni Pulau Misool, Salawati, Batanta dan Waigeo, merupakan pulau-pulau besar. Dari seluruh pulau hanya 35 pulau yang berpenghuni sedangkan pulau lainnya tidak berpenghuni dan sebagian besar belum memiliki nama. Kabupaten ini memiliki total luas 67.379,60 km² dengan rincian luas daratan 7.559,60 km² dan luas lautan 59.820,00 km².Raja Ampat dideklarasikan sebagai kabupaten baru, berdasarkan UU No. 26 tahun 2002 tentang Pembentukan Kabupaten Sarmi, Kabupaten Kerom, Kabupaten Sorong Selatan, dan Kabupaten Raja Ampat, tanggal 3 Mei tahun 2002. Kabupaten Raja Ampat merupakan hasil pemekaran dari Kabupaten Sorong dan termasuk salah satu dari 14 kabupaten baru di Tanah Papua. Pusat pemerintahan berada di Waisai, Distrik Waigeo Selatan, sekitar 36 mil dari Kota Sorong. Kepemerintahan di kabupaten ini baru berlangsung efektif pada tanggal 09 Mei 2003 yang ditandai dengan pembukaan selubung papan nama oleh Gubernur Papua, Alm. Drs. Yaap Salosa.
+                 </span>
+    
+                <div class="">
+                    <button id="button_akomodasi" onmouseover="focus_button_akomoadsi()" onmouseout="blur_button_akomodasi()">cari Akomodasi</button>
+                </div>
+            </div>
+            <div class="box-RajaAmpat-kanan">
+                <img src="images/RajaAmpat.jpg" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="content3">
+        <div class="heading">
+            <h1>Silahkan Hubungi <span class="hijau">Kami</span></h1>
+        </div>
+        <div class="box-form">
+            <div class="form">
+                <form action="">
+                    <input type="text" placeholder="Masukan Nama Anda">
+                    <input type="text" placeholder="Masukan Email Anda">
+                    <input type="date">
+                    <textarea name="" id="" placeholder="Tulis Pesan di Sini"></textarea>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <b>Copyright 2024 Desain Web By : </b><a href="">Kelompok 1</a>
+    </div>
+
+    <script>
+        function button_info(){
+            var info = document.getElementById("infoRajaAmpat");
+            if(info.style.display == "none"){
+                info.style.display = "flex";
+            } else{
+                info.style.display = "none";
+            }
+        }
+
+        function focus_button_akomoadsi(){
+            var button = document.getElementById("button_akomodasi");
+            button.style.backgroundColor = "red";
+        }
+
+        function blur_button_akomodasi(){
+            var button = document.getElementById("button_akomodasi");
+            button.style.backgroundColor = "#f10396";
+        }
+    </script>
+    
+</body>
+</html>
